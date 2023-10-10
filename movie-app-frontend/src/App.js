@@ -4,6 +4,7 @@ import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
 import Layout from './components/Layout';
 import {Routes, Route} from 'react-router-dom';
+import Home from './components/home/Home';
 
 function App() {
   const [movies, setMovies] = useState();
@@ -39,8 +40,8 @@ function App() {
       <header className="App-header">
       <Routes>
           <Route path="/" element={<Layout/>}>
-            {/* <Route path="/" element={<Home movies={movies} />} ></Route>
-            <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
+            <Route path="/" element={<Home movies={movies} />} ></Route>
+            {/* <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
             <Route path="/Reviews/:movieId" element ={<Reviews getMovieData = {getMovieData} movie={movie} reviews ={reviews} setReviews = {setReviews} />}></Route>
             <Route path="*" element = {<NotFound/>}></Route> */}
           </Route>
